@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Rated Roofers - Quality Roofing Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <meta name="description" content="Best Rated Roofers - Reliable roofing solutions for homes and businesses. Get a free quote today!">
+</head>
+<body>
+    <header>
+        <h1>Best Rated Roofers</h1>
+        <p>Reliable roofing solutions for homes and businesses</p>
+    </header>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Roof Repairs</li>
+            <li>New Roof Installations</li>
+            <li>Leak Detection & Fixes</li>
+            <li>Emergency Roofing Support</li>
+        </ul>
+    </section>
+    
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="fade-in">"Outstanding service! Highly recommended." - Jane D.</p>
+        <p class="fade-in">"Reliable and professional roofing solutions." - Mark T.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="confirmationMessage" class="hidden">Thank you! Your appointment has been booked.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Best Rated Roofers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+section {
+    padding: 20px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+form {
+    display: inline-block;
+    text-align: left;
+}
+button {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn ease-in-out 1s forwards;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("confirmationMessage").classList.remove("hidden");
+});
